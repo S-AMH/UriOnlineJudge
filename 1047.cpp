@@ -24,17 +24,16 @@ tuple<int,int> gameDurationCalculatorWithMinutes(int sh, int sm, int eh, int em)
         if(sm == 60)
         {
             sh ++;
-            sm = 1;
+            sm = 0;
         }
 
         if(sh == 24)
-            sh = 1;
+            sh = 0;
         if(dm == 60)
         {
             dh ++;
-            dm = 1;
+            dm = 0;
         }
-
     } while (sh != eh || sm != em);
     return {dh,dm};
     
